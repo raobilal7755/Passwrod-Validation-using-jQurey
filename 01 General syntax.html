@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- this is a jquery file , this is main file. -->
+	<script type="text/javascript" src="jquery-3.3.1.js"></script>
+
+
+   <!-- now start jquery functionality ..  lets go -->
+	<script type="text/javascript">
+		/*
+		 this is a main syntax copy it again and agian.. $('').(); 
+		 */
+		$(document).ready(function(){
+         $('input[type=password]').keyup(function(){
+         	var length=$(this).val();
+
+         	if (length < 8) 
+         	{
+         		$('#length').addClass('invalid').removeClass('valid');
+         	}
+         	else 
+         	{
+         		$('#length').addClass('valid').removeClass('invalid');
+         	}
+
+         	if (length.match(/[A-z]/)) 
+         	{
+         		$('#letter').addClass('valid').removeClass('invalid');
+         	}
+         	else 
+         	{
+         		$('#letter').addClass('invalid').removeClass('valid');
+         	}
+
+         	if (length.match(/[A-Z]/)) 
+         	{
+         		$('#capital').addClass('valid').removeClass('invalid');
+         	}
+         	else 
+         	{
+         		$('#capital').addClass('invalid').removeClass('valid');
+         	}
+
+         	if (length.match(/\d/)) 
+         	{
+         		$('#number').addClass('valid').removeClass('invalid');
+         	}
+         	else 
+         	{
+         		$('#number').addClass('invalid').removeClass('valid');
+         	}
+         }).focus(function(){
+         	$('#pass_info').show();
+         }).blur(function(){
+         	$('#pass_info').hide();
+         });
+     });
+	</script>
+</head>
+<body>
+	<div id="container">
+		<h1>Password Verification</h1>
+		<form action="">
+		<ul>
+				<li>
+					<label>Username:</label>
+					<span><input type="text" name="username" id="username" placeholder="Enter you name" ></span>
+				</li>
+				<li>
+					<label>Password:</label>
+					<span><input type="password" name="pass" id="pass" placeholder="Enter you password" ></span>
+				</li>
+				<li>
+					<button type="submit">Registered</button>
+				</li>
+			</ul>
+		</form>
+
+		<div id="pass_info">
+			<h4>Password must be meet following Requirments</h4>
+
+			<ul>
+				<li id="letter" class="invalid" >At least one letter</li>
+				<li id="capital" class="invalid" >At least one capital letter</li>
+				<li id="number" class="invalid" >At least one number</li>
+				<li id="length" class="invalid" >Lenght must be at least 8</li>
+			</ul>
+		</div>
+	</div>
+	
+</body>
+</html>

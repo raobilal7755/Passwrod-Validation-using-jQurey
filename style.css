@@ -1,0 +1,81 @@
+body{
+	background-color: #8F8484;
+	font-family: arial;
+	font-size: 16px;
+	color: #444;
+	margin: 0px;
+	padding: 0px;
+}
+#container{
+	border: 1px solid #8F8484 ;
+	margin-left: 430px;
+	width: 500px;
+	margin-top: 60px;
+	background-color:#F6EEEE;
+	border-radius: 10px;
+	padding: 10px;
+	position: relative;
+
+}
+#container h1{
+	background-color: #4F71DF;
+	padding: 10px 0px;
+	margin:0px;
+	border-radius: 5px 5px 5px 5px;
+	font-size: 24px;
+	text-align: center;
+}
+ul , li{
+	list-style-type: none;
+	padding: 0px;
+
+}
+input{
+	width: 428px;
+	padding: 10px 5px;
+	border-radius: 6px;
+
+}
+span{
+     border: 1px solid #F8F3F3;
+     padding: 5px 15px;
+     display: block;
+}
+button{
+	margin-left: 200px;
+	margin-top: 20px;
+	margin-bottom: 17px;
+	padding: 10px 20px;
+	background-color:#4F71DF ;
+	border-radius: 20px;
+	color: white;
+
+}
+button:active{
+	background-color: #1E48C1;
+}
+#pass_info{
+	   position: absolute;
+	   width: 400px;
+	   border: 1px solid white;
+	   background-color: #E7E2E2;
+	   bottom: -45px;
+	   border-radius: 10px;
+	   left: 40px;
+	   font-size: .728em;
+	   padding: 7px;
+	   box-shadow: 15px 5px 20px #FCEFEF;
+}
+#pass_info ul li{
+	line-height: 20px;
+}
+.invalid{
+	color: red;
+}
+.valid{
+	color: green;
+}
+#pass_info{
+	display: none;
+}
+
